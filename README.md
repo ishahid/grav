@@ -10,7 +10,7 @@ $ git clone git@github.com:ishahid/grav.git && cd owncloud && docker build -t gr
 
 ## Or pull the image from Docker Hub
 ```bash
-$ docker pull ishahid/grav:1.3
+$ docker pull ishahid/grav:1.4
 ```
 
 ## Run the image
