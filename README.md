@@ -5,17 +5,17 @@ Docker image for [Grav](https://getgrav.org), based on the [Amazon Linux 2017.09
 
 ## Build the image
 ```bash
-$ git clone git@github.com:ishahid/grav.git && cd owncloud && docker build -t grav .
+$ git clone git@github.com:ishahid/grav.git && cd grav && docker build -t grav .
 ```
 
 ## Or pull the image from Docker Hub
 ```bash
-$ docker pull ishahid/grav:1.4
+$ docker pull ishahid/grav:latest
 ```
 
 ## Run the image
 ```bash
-$ docker run -d -p 8000:80 grav
+$ docker run -d -p 8000:80 ishahid/grav
 ```
 
 ## Installation
