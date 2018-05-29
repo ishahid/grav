@@ -9,12 +9,12 @@ sudo usermod -a -G www apache
 sudo service httpd start
 sudo chkconfig httpd on
 
-cd ~ 
-wget https://getgrav.org/download/core/grav-admin/1.4.1 -O grav-admin-1.3.10.zip && unzip grav-admin-1.4.1.zip
-sudo mv /var/www/html /var/www/html.old 
+cd ~
+wget https://getgrav.org/download/core/grav-admin/1.4.5 -O grav-admin-1.4.5.zip && unzip grav-admin-1.4.5.zip
+sudo mv /var/www/html /var/www/html.old
 sudo mv grav-admin /var/www/html
 
-cd /var/www/html 
+cd /var/www/html
 sudo chown -R apache:www .
 find . -type f | sudo xargs chmod 664
 find ./bin -type f | sudo xargs chmod 775

@@ -1,4 +1,4 @@
-FROM amazonlinux:2017.09
+FROM amazonlinux:2018.03
 MAINTAINER "Imran Shahid" <narmi79@gmail.com>
 
 RUN yum -y install sudo wget zip unzip && \
@@ -9,7 +9,7 @@ RUN sudo yum -y install httpd24 php56-devel php56-pear php56-mbstring php56-cli 
 RUN sudo groupadd www && \
     sudo usermod -a -G www apache
 
-ARG GRAV_VER=1.4.2
+ARG GRAV_VER=1.4.5
 RUN cd ~ && \
     wget https://getgrav.org/download/core/grav-admin/$GRAV_VER -O grav-admin-$GRAV_VER.zip && \
     unzip grav-admin-$GRAV_VER.zip && \
