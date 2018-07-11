@@ -10,7 +10,8 @@ sudo service httpd start
 sudo chkconfig httpd on
 
 cd ~
-wget https://getgrav.org/download/core/grav-admin/1.4.5 -O grav-admin-1.4.5.zip && unzip grav-admin-1.4.5.zip
+wget https://github.com/getgrav/grav/releases/download/1.4.6/grav-admin-v1.4.6.zip -O grav-admin-1.4.6.zip
+unzip grav-admin-1.4.6.zip
 sudo mv /var/www/html /var/www/html.old
 sudo mv grav-admin /var/www/html
 
