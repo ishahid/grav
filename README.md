@@ -20,3 +20,10 @@ $ docker run -d -p 8000:80 ishahid/grav
 
 ## Installation
 Point your browser to http://localhost:8000 and complete the setup. Read the [Basic Tutorial](https://learn.getgrav.org/basics/basic-tutorial) to learn how it works.
+
+## Docker Hub
+To build, tag and push to docker hub use the following commands.
+```bash
+$ docker build -t ishahid/grav -t ishahid/grav:VER .
+$ docker push ishahid/grav
+```
