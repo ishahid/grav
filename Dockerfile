@@ -2,12 +2,14 @@ FROM amazonlinux:2018.03
 MAINTAINER "Imran Shahid" <narmi79@gmail.com>
 
 # define grav version
-ARG GRAV_VERSION=1.4.6
+ARG GRAV_VERSION=1.6.10
 
 # install dependencies
 RUN yum -y install sudo wget zip unzip && \
     sudo yum -y update && \
-    sudo yum -y install httpd24 php56-devel php56-pear php56-mbstring php56-cli php56-imap php56-gd php56-xml php56-soap php56-pecl-apc
+    sudo yum -y remove httpd* php* && \
+    sudo yum -y install httpd24 && \
+    sudo yum -y install php71 php71-pear php71-mbstring php71-cli php71-imap php71-gd php71-xml php71-soap php71-pecl-apc
 
 # create group www and add user apache to it
 RUN sudo groupadd www && \

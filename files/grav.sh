@@ -1,6 +1,8 @@
 sudo yum -y update
 sudo yum -y install wget zip unzip
-sudo yum -y install httpd24 php56-devel php56-pear php56-mbstring php56-cli php56-imap php56-gd php56-xml php56-soap php56-pecl-apc
+sudo yum -y remove httpd* php*
+sudo yum -y install httpd24
+sudo yum -y install php71 php71-pear php71-mbstring php71-cli php71-imap php71-gd php71-xml php71-soap php71-pecl-apc
 
 sudo groupadd www
 sudo usermod -a -G www ec2-user
@@ -10,8 +12,8 @@ sudo service httpd start
 sudo chkconfig httpd on
 
 cd ~
-wget https://github.com/getgrav/grav/releases/download/1.4.6/grav-admin-v1.4.6.zip -O grav-admin-1.4.6.zip
-unzip grav-admin-1.4.6.zip
+wget https://github.com/getgrav/grav/releases/download/1.6.10/grav-admin-v1.6.10.zip -O grav-admin-1.6.10.zip
+unzip grav-admin-1.6.10.zip
 sudo mv /var/www/html /var/www/html.old
 sudo mv grav-admin /var/www/html
 
